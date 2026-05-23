@@ -155,17 +155,18 @@ Spent **300 minutes (5 hours)** exploring the AWS Management Console across mult
 - **Service interconnections** — EC2 can't work without VPC, IAM roles, and Security Groups. Nothing in AWS is standalone.
 - **CCNA maps directly to AWS** — VPC, subnets, route tables, and NACLs are the same concepts from CCNA — just cloud-hosted.
 
-### Screenshots
-> 📸 *Replace with your actual screenshots*
 
 ![AWS Console Overview](./screenshots/04_console_explore.png)
 *AWS Management Console — all service categories*
 
+
 ![VPC Dashboard](./screenshots/05_vpc_dashboard.png)
 *VPC dashboard — recognising the CCNA concepts*
 
+
 ![IAM Dashboard](./screenshots/06_iam_dashboard.png)
 *IAM dashboard — users, groups, roles, policies*
+
 
 ![CloudWatch Overview](./screenshots/07_cloudwatch.png)
 *CloudWatch — metrics and monitoring overview*
@@ -212,7 +213,7 @@ The VPC console shows **route tables, subnets, and NACLs** — all from CCNA. Th
 
 ---
 
-## 📁 Suggested Folder Structure for GitHub
+## 📁 Folder Structure for GitHub
 
 ```
 week1-monday/
@@ -227,7 +228,7 @@ week1-monday/
 └── week1_monday_aws_setup.md
 ```
 
-> 💡 Put your screenshots in a `screenshots/` folder next to the `.md` file. GitHub renders them inline automatically.
+
 
 ---
 
