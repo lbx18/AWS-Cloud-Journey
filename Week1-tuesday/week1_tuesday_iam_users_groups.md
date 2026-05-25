@@ -55,8 +55,7 @@ aws iam create-user --user-name lab-admin
 aws iam create-login-profile --user-name lab-admin --password "YourP@ssword!" --password-reset-required
 ```
 
-### Screenshot
-> Replace with your actual screenshot
+
 
 ![IAM User Created](/Week1-tuesday/screenshorts/01_iam_user_created.png)
 ![IAM User Created](/Week1-tuesday/screenshorts/011_iam_user_created.png)
@@ -169,14 +168,12 @@ aws iam detach-user-policy \
 aws iam get-group --group-name NetworkAdmins
 ```
 
-### Screenshot
-> Replace with your actual screenshot
 
 ![User Added to Group](/Week1-tuesday/screenshorts/04_user_in_group.png)
 ![User Added to Group](/Week1-tuesday/screenshorts/044_user_in_group.png)
 *lab-admin added to NetworkAdmins — permissions now inherited from group*
 
-![User Added to Group](/Week1-tuesday/screenshorts/0444_user_in_group.png)
+![User Added to Group](/Week1-tuesday/screenshorts/05_permissions_from_group.png)
 *IAM permissions tab showing policy inherited via group, not directly attached*
 
 ---
