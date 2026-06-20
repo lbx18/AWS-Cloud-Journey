@@ -359,11 +359,13 @@ sts:AssumeRole is the underlying API call — AWS STS issues the temp credential
 Week1-thursday/
 ├── screenshorts/
 │   ├── 01_create_role.png
+│   ├── 011_create_role.png
 │   ├── 02_policy_attached_to_role.png
 │   ├── 022_role_attached_ec2.png
 │   ├── 0222_s3_list_from_ec2.png
 │   ├── 03_roles_vs_users.png
-│   └── 04_iam_summary.png
+│   ├── 04_iam_summary.png
+│   └── Identity_and_Access_Management_Essentials.png
 └── week1_thursday_iam_roles.md
 ```
 
