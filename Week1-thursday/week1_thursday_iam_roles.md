@@ -297,7 +297,7 @@ Spent 10 minutes watching the AWS IAM deep dive segment on roles, users, and gro
 
 ### Screenshot
 
-![IAM Summary Dashboard](//Week1-thursday/screenshots/04_iam_summary.png)
+![IAM Summary Dashboard](screenshots/04_iam_summary.png)
 *IAM dashboard showing users, groups, roles, and policies created this week*
 
 ---
