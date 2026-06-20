@@ -253,7 +253,7 @@ With an IAM role:
 - Rotation happens automatically — nothing to manage
 
 ### Screenshot
-> Replace with your actual screenshot
+
 
 ![Roles vs Users Comparison](/Week1-thursday/screenshots/03_roles_vs_users.png)
 *IAM roles list — showing EC2-S3-ReadOnly-Role with trust policy*
@@ -297,7 +297,7 @@ Spent 10 minutes watching the AWS IAM deep dive segment on roles, users, and gro
 
 ### Screenshot
 
-![IAM Summary Dashboard](/Week1-thursday/screenshots/04_iam_summary.png)
+![IAM Summary Dashboard](//Week1-thursday/screenshots/04_iam_summary.png)
 *IAM dashboard showing users, groups, roles, and policies created this week*
 
 ---
