@@ -490,7 +490,7 @@ No warnings or errors on the custom policy either.
 | No guide | Achieved |
 | All resources correct | Verified |
 
-**38 minutes** to rebuild the full week's IAM structure from scratch using only the CLI. The extra 7 minutes were spent looking up the `--query` JMESPath syntax for filtering output — everything else came from memory.
+**2H38 minutes** to rebuild the full week's IAM structure from scratch using only the CLI. The extra 7 minutes were spent looking up the `--query` JMESPath syntax for filtering output — everything else came from memory.
 
 ### What was easy
 - User and group creation — clean muscle memory from the week
