@@ -211,7 +211,7 @@ Output:
 ```
 
 ### Screenshots
-> Replace with your actual screenshots
+
 
 ![Groups Created](Screenshots/02_groups_created.png)
 *aws iam list-groups — all three groups created and verified*
@@ -416,7 +416,7 @@ MFA:          Enabled on root account
 ```
 
 ### Screenshots
-> Replace with your actual screenshots
+
 
 ![Full Verification](Screenshots/04_full_verification.png)
 *Full CLI verification sweep — all IAM resources confirmed*
@@ -471,7 +471,7 @@ Output:
 No warnings or errors on the custom policy either.
 
 ### Screenshots
-> Replace with your actual screenshots
+
 
 ![Access Analyzer Clean](Screenshots/05_access_analyzer.png)
 *aws accessanalyzer list-findings — zero findings on clean lab account*
