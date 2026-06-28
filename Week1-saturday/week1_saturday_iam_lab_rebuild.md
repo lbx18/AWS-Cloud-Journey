@@ -524,7 +524,7 @@ The discipline is identical — understand the concept deeply enough that you ca
 ## Key Takeaways
 
 ```
-Rebuilt full IAM structure in 2h=H38 minutes — users, groups, policies, role
+Rebuilt full IAM structure in 2H38 minutes — users, groups, policies, role
 Policy JSON written from memory correctly on first attempt
 simulate-custom-policy confirmed all allow/deny logic before attaching
 Access Analyzer returned zero findings — account is clean
