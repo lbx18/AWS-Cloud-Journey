@@ -170,7 +170,7 @@ aws iam get-group --group-name NetworkAdmins
 
 
 ![User Added to Group](/Week1-tuesday/screenshorts/04_user_in_group.png)
-![User Added to Group](/Week1-tuesday/screenshorts/044_user_in_group.png)
+![User Added to Group](/Week1-tuesday/screenshorts/0444_user_in_group.png)
 *lab-admin added to NetworkAdmins — permissions now inherited from group*
 
 ![User Added to Group](/Week1-tuesday/screenshorts/05_permissions_from_group.png)
