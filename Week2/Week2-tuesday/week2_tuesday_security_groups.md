@@ -328,7 +328,7 @@ aws ec2 authorize-security-group-egress \
 ```
 
 ### Screenshot
-> Replace with your actual screenshot
+
 
 ![Stateful Test](screenshots/04_stateful_test.png)
 *curl still succeeding despite no matching outbound rule for port 80 — proof of stateful behaviour*
