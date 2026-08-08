@@ -3,7 +3,7 @@
 > **Roadmap:** AWS Cloud Networking → Cloud Network Security  
 > **Phase:** 1 — Foundation  
 > **Background:** Linux · CCNA Networking  
-> **Date Completed:** June 2026
+> **Date Completed:** August 2026
 
 ---
 
@@ -29,7 +29,7 @@ This is **Day 2 of Week 2**. Yesterday I opened port 22 with a single quick comm
 | **Week** | Week 2 |
 | **Day** | Tuesday |
 | **Focus** | Security Groups — inbound/outbound rules, stateful behaviour |
-| **Time Invested** | ~1.5 hours |
+| **Time Invested** | ~2.5 hours |
 | **AWS Free Tier** | Active |
 | **Status** | All tasks completed |
 
@@ -126,12 +126,11 @@ aws ec2 modify-instance-attribute \
 ```
 
 ### Screenshots
-> Replace with your actual screenshots
 
-![Full Rule Review](./screenshorts/01_full_rule_review.png)
+![Full Rule Review](screenshots/01_full_rule_review.png)
 *describe-security-groups showing the full default SG rule set*
 
-![Dedicated SG Created](./screenshorts/011_dedicated_sg_created.png)
+![Dedicated SG Created](screenshots/011_dedicated_sg_created.png)
 *Week2-Lab-SG created and attached to the instance*
 
 ---
@@ -151,7 +150,7 @@ ssh -i week2-lab-key.pem ec2-user@54.211.XXX.XXX
 sudo yum update -y
 
 # Install Nginx
-sudo amazon-linux-extras install nginx1 -y
+sudo yum  install nginx -y
 
 # Start Nginx and enable on boot
 sudo systemctl start nginx
@@ -177,18 +176,16 @@ curl localhost
 
 Output:
 ```html
-<!DOCTYPE html>
 <html>
-<head><title>Welcome to nginx!</title></head>
+<head>
+<title>Welcome to nginx!</title>
 ...
 ```
 
-Nginx is serving locally — confirms the issue (if any) when testing externally will be the Security Group, not the web server itself.
+Nginx is serving locally, confirms the issue (if any) when testing externally will be the Security Group, not the web server itself.
 
 ### Screenshot
-> Replace with your actual screenshot
-
-![Nginx Running](./screenshorts/02_nginx_running.png)
+![Nginx Running](screenshots/02_nginx_running.png)
 *systemctl status nginx showing active (running)*
 
 ---
@@ -217,7 +214,7 @@ SSH (port 22)  → restricted to my IP only   → management access, should be l
 HTTP (port 80) → open to 0.0.0.0/0          → public web server, meant to be reached by anyone
 ```
 
-This is the core judgment call in Security Group design — not everything should be locked to one IP. The rule depends entirely on what the port is for.
+This is the core judgment call in Security Group design, not everything should be locked to one IP. The rule depends entirely on what the port is for.
 
 ### Verify the rule was added
 
@@ -264,12 +261,11 @@ Output:
 Confirmed working from outside the AWS network — the Security Group rule and Nginx are both functioning correctly together.
 
 ### Screenshots
-> Replace with your actual screenshots
 
-![HTTP Rule Added](./screenshorts/03_http_rule_added.png)
+![HTTP Rule Added](screenshots/03_http_rule_added.png)
 *describe-security-groups showing both port 22 and port 80 rules*
 
-![Browser Test Success](./screenshorts/033_browser_test.png)
+![Browser Test Success](screenshots/033_browser_test.png)
 *Nginx welcome page loading in browser via public IP*
 
 ---
@@ -317,7 +313,7 @@ curl http://54.211.XXX.XXX
 | Behaviour | Security Group (Stateful) | NACL (Stateless) |
 |---|---|---|
 | Inbound allowed on port 80 | Response automatically allowed out | Must explicitly allow the return traffic out too |
-| Need matching outbound rule | No | Yes — must define both directions |
+| Need matching outbound rule | No | Yes must define both directions |
 | Applies to | Instance-level (ENI) | Subnet-level |
 
 ### Restore the working outbound rule
@@ -334,7 +330,7 @@ aws ec2 authorize-security-group-egress \
 ### Screenshot
 > Replace with your actual screenshot
 
-![Stateful Test](./screenshorts/04_stateful_test.png)
+![Stateful Test](screenshots/04_stateful_test.png)
 *curl still succeeding despite no matching outbound rule for port 80 — proof of stateful behaviour*
 
 ---
