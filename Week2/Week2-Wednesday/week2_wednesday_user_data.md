@@ -78,6 +78,8 @@ bash -n user-data.sh
 ### Screenshot
 
 ![User Data Script Written](screenshots/01_user_data_script.png)
+
+
 *user-data.sh contents shown in the terminal*
 
 ---
@@ -117,6 +119,8 @@ Scanning the output for `State` shows `running`, and further down the `PublicIpA
 ### Screenshot
 
 ![Instance Launched with User Data](screenshots/02_instance_launched.png)
+
+
 *run-instances command with --user-data file attached*
 
 ---
@@ -160,9 +164,13 @@ Output:
 ### Screenshot
 
 ![Curl Test Success](screenshots/33_httpd_systemctl.png)
+
+
 *httpd.service - The Apache HTTP server was enabled, and running*
 
 ![Curl Test Success](screenshots/03_curl_test.png)
+
+
 *curl showing the auto-provisioned page, no SSH used*
 
 
@@ -219,6 +227,8 @@ Both returned nothing — clean run.
 ### Screenshot
 
 ![Cloud-Init Output Log](screenshots/04_cloud_init_output_log.png)
+
+
 *cloud-init-output.log showing the script's commands executing in order*
 
 ---
