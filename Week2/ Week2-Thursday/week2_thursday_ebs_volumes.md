@@ -42,7 +42,7 @@ aws ec2 describe-instances \
   --profile lab
 ```
  
-Found it — `us-east-1a`. Created a small 5GB `gp3` volume in that same zone:
+Found it — `us-east-1c`. Created a small 5GB `gp3` volume in that same zone:
  
 ```bash
 aws ec2 create-volume \
