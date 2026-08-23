@@ -46,7 +46,7 @@ Found it — `us-east-1c`. Created a small 5GB `gp3` volume in that same zone:
  
 ```bash
 aws ec2 create-volume \
-  --availability-zone us-east-1a \
+  --availability-zone us-east-1c \
   --size 5 \
   --volume-type gp3 \
   --tag-specifications 'ResourceType=volume,Tags=[{Key=Name,Value=Week2-Data-Volume}]' \
