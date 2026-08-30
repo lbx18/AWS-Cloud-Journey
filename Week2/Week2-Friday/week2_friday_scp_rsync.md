@@ -106,6 +106,8 @@ rsync -avz -e "ssh -i week2-lab-key.pem" \
 Only `notes.txt` showed up in the transfer output. `data.txt` didn't move at all, because nothing about it had changed. That's the actual point of `rsync` over `scp` — for anything beyond a single one-off file, this is the only sane option. Watching it skip the unchanged file was oddly satisfying.
 
 ![Rsync Delta Sync](screenshots/02_rsync_sync.png)
+
+
 *rsync transferring only the changed file on the second run*
 
 ---
