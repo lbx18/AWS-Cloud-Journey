@@ -107,6 +107,7 @@ Of course it's the one flag with no obvious error message when it's missing — 
 
 ![Instance Relaunched](screenshot/01_instance_relaunched.png)
 
+
 *run-instances with --associate-public-ip-address included — public IP assigned*
 
 ---
@@ -151,6 +152,7 @@ This part came out fast — no hesitation on the SSH-vs-HTTP scoping logic like 
 
 ![Security Group Rules](screenshot/02_sg_rules.png)
 
+
 *describe-security-groups showing both rules on the new dedicated SG*
 
 ---
@@ -192,6 +194,8 @@ echo "Week 2 Saturday rebuild - persistence check" | sudo tee /data/test.txt
 ```
 
 ![EBS Attached and Mounted](screenshot/03_ebs_mounted.png)
+
+
 *Volume formatted and mounted at /data, test file written, no naming surprise this time*
 
 ---
@@ -219,6 +223,8 @@ ssh week2-rebuild
 Connected cleanly on the first try. Small thing, but doing this on Step 4 instead of Day 5 of an entire week felt like real progress — the shortcut is now part of how I start a lab, not an afterthought at the end of one.
 
 ![SSH Shortcut Working](screenshot/04_ssh_shortcut.png.png)
+
+
 *ssh week2rebuild connecting immediately using the config alias*
 
 ---
@@ -246,6 +252,8 @@ aws ec2 describe-instances \
 Everything came back clean — Apache serving the rebuild test page, `/data/test.txt` intact, both Security Group rules present, instance state `running`.
 
 ![Full Verification](screenshot/05_verification.png.png)
+
+
 *curl, cat, and describe-security-groups all confirming the rebuild is correct*
 
 ---
