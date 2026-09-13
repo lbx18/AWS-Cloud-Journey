@@ -45,7 +45,7 @@ Same drill as Week 1's Saturday — everything this week gets rebuilt from nothi
 ✓ Build everything from memory
 ```
 
-Target: full environment rebuilt in under 40 minutes.
+Target: full environment rebuilt in under 2 hours.
 
 ---
 
@@ -164,7 +164,7 @@ aws ec2 describe-instances \
   --profile lab
 ```
 
-Found `us-east-1a`, created and attached a fresh volume:
+Found `us-east-1c`, created and attached a fresh volume:
 
 ```bash
 aws ec2 create-volume \
@@ -254,7 +254,7 @@ Everything came back clean — Apache serving the rebuild test page, `/data/test
 
 | Target | Actual |
 |---|---|
-| Under 40 minutes | 43 minutes |
+| Under 1 hour | 55 minutes |
 | No console | Achieved |
 | No notes | Achieved |
 | Everything working | Verified |
@@ -356,6 +356,8 @@ No inbound management port on this instance anymore. The Security Group from Ste
 The original goal in Step 2 was "restrict SSH to my own IP." That's the right instinct, but it assumes the IP is a stable thing to restrict *to* — and on a CGNAT connection, it isn't. Chasing wider and wider CIDRs to compensate for an unstable client address was never going to end anywhere good. The actual fix wasn't a bigger subnet, it was removing the assumption that inbound network access is the right control for this problem in the first place.
 
 ![SSM Session Working](screenshot/06_ssm_session.png.png)
+
+
 *aws ssm start-session connecting as ssm-user, no inbound SSH port required*
 
 ---
